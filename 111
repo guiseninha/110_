@@ -1,0 +1,55 @@
+import random
+
+response = "y"
+
+while response == "y":
+    # Gere um número aleatório entre 1 e 6 para simular um lançamento de dado
+    numero = random.randint(1, 6)
+    
+    # Imprima o dado visual baseado no número
+    if numero == 1:
+        print(" ------- ")
+        print("|       |")
+        print("|   0   |")
+        print("|       |")
+        print(" ------- ")
+    elif numero == 2:
+        print(" ------- ")
+        print("| 0     |")
+        print("|       |")
+        print("|     0 |")
+        print(" ------- ")
+    elif numero == 3:
+        print(" ------- ")
+        print("| 0     |")
+        print("|   0   |")
+        print("|     0 |")
+        print(" ------- ")
+    elif numero == 4:
+        print(" ------- ")
+        print("| 0   0 |")
+        print("|       |")
+        print("| 0   0 |")
+        print(" ------- ")
+    elif numero == 5:
+        print(" ------- ")
+        print("| 0   0 |")
+        print("|   0   |")
+        print("| 0   0 |")
+        print(" ------- ")
+    else:
+        print(" ------- ")
+        print("| 0   0 |")
+        print("| 0   0 |")
+        print("| 0   0 |")
+        print(" ------- ")
+
+    # Solicite ao usuário que decida se quer jogar novamente
+    response = input("Deseja jogar o dado novamente? (y/n): ").lower()
+
+    # Verifique se a resposta é válida (y ou n)
+    while response != "y" and response != "n":
+        print("Resposta inválida. Por favor, digite 'y' para continuar ou 'n' para sair.")
+        response = input("Deseja jogar o dado novamente? (y/n): ").lower()
+
+print("O jogo de dado foi encerrado. Obrigado por jogar!")
